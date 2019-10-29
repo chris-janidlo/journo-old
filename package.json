@@ -2,9 +2,9 @@
   "name": "journo",
   "description": "typing interview game",
   "scripts": {
-    "run-ink": "./lib/inklecate -p src/story.ink",
+    "ink": "./lib/inklecate -p src/story.ink",
     "build": "./build.sh",
-    "start": "npm run build && http-server"
+    "start": "npx watch \"npm run build\" src  &  npx live-server public"
   },
   "engines": {
     "node": ">=v12.13.0",
@@ -13,6 +13,7 @@
   "author": "crass_sandwich",
   "private": true,
   "devDependencies": {
-    "http-server": "^0.11.1"
+    "live-server": "^1.2.1",
+    "watch": "^1.0.2"
   }
 }
